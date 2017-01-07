@@ -1,3 +1,4 @@
 # First file in sandbox
 
-print('Wow')
+print('Sandbox initiated')
+print('Stardate 1.')
