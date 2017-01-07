@@ -1,0 +1,19 @@
+def enter_word():
+    count = 0
+    word = input('input a word')
+    if len(word) < 2:
+        if count > 3:
+            print('No, silly.  That\'s not a valid word. I give up!')
+            exit()
+        else:
+            print('Error, word needs two letters at least')
+            count += count
+            word = enter_word()
+    return word
+
+word = enter_word()
+
+word_pyglatin = word[1:]+word[0]+'ay'
+print(word+' in PygLatin is...'+word_pyglatin)
+
+
