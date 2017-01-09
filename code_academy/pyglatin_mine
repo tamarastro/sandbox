@@ -9,6 +9,7 @@ def enter_word():
             print('Error, word needs two letters at least')
             count += count
             word = enter_word()
+            print(word)
     return word
 
 word = enter_word()
