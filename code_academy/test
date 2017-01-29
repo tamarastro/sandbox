@@ -1,0 +1,27 @@
+def digit_sum(n):
+    string=str(n)
+    print(string)
+    tot=0
+    for i in string:
+        tot+=int(i)
+    return tot
+
+def digit_sum2(n):
+    tot=n%10
+    while (n//10 > 0):
+        n=n//10
+        tot+=n%10
+    tot+=n%10
+    return tot
+
+def whiletest(n):
+    while (n > 0):
+        print(n)
+        n-=1
+    return n
+
+#print(digit_sum(123))
+n=12345
+print(digit_sum2(n))
+print(n)
+#print('n=',whiletest(12))
