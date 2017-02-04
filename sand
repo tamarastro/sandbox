@@ -1,4 +1,29 @@
 # First file in sandbox
+import numpy as np
+import matplotlib.pyplot as plt
 
-print('Sandbox initiated')
-print('Stardate 1.')
+x = np.arange(3)
+x=x/2.
+for i in range(3):
+    print(x[i])
+
+exit()
+n=1000
+i = np.arange(0,n)
+
+x = np.random.randn(n)
+x = x + 1
+plt.plot(i,x)
+plt.plot(i,np.ones(n)*np.mean(x))
+plt.plot(i,np.ones(n)*np.mean(x)+np.std(x))
+plt.plot(i,np.ones(n)*np.mean(x)-np.std(x))
+plt.show()
+
+xmean = np.sum(x)/len(x)
+xmean = np.mean(x)
+xstdev = np.std(x)
+
+print(xstdev)
+print(len(x))
+
+print(xmean)
