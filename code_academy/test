@@ -1,6 +1,5 @@
 def digit_sum(n):
     string=str(n)
-    print(string)
     tot=0
     for i in string:
         tot+=int(i)
@@ -9,19 +8,42 @@ def digit_sum(n):
 def digit_sum2(n):
     tot=n%10
     while (n//10 > 0):
+        print('start =',tot,n)
         n=n//10
         tot+=n%10
-    tot+=n%10
+        print('finish=',tot,n)
     return tot
 
-def whiletest(n):
-    while (n > 0):
-        print(n)
+def factorial(n):
+    factorial=n
+    while (n > 1):
         n-=1
-    return n
+        factorial *= n
+        print(n,factorial)
+    return factorial
 
-#print(digit_sum(123))
-n=12345
-print(digit_sum2(n))
+def is_prime(x):
+    if (x <=1): return False
+    d=2
+    while(d<x):
+        print(x,d,x%d)
+        if x%d == 0:
+            return False
+        d+=1
+    return True
+
+def reverse(test):
+    rev=''
+    for i in range(len(test)-1,-1,-1):
+        rev+=test[i]
+    return rev
+
+n=6
+#print(digit_sum(n))
+#print(digit_sum2(n))
+#print(factorial(n))
+x=0
+print(is_prime(x))
 print(n)
+print(reverse('abcd'))
 #print('n=',whiletest(12))

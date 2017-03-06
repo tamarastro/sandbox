@@ -37,10 +37,15 @@ def dist_lum(xx,ok,z):
 
 
 #################
+# Make array of redshifts
 n=50
 zmax=0.1
 zs=np.arange(n+1)/(n)*zmax # set array of redshifts
 zs=zs[1:]                  # get rid of z=0
+
+# Read in array of redshifts
+#zs = np.genfromtxt('z_CMB_default.txt')
+n=len(zs)
 xs=np.zeros(n)             # set array of comoving distances
 err=np.zeros(n)            # set array of errors in integral
 
@@ -66,7 +71,7 @@ print('H0 fiducial model=',np.mean(H0))
 ###################################
 # Set up a range of possible models
 omarr = np.arange(0.29,0.31,0.005)
-w0arr = np.arange(-1.1,-0.9,0.05)
+w0arr = np.arange(-2.0,-0.9,0.05)
 
 ###################################
 # Calculate Luminosity distance in the range of possible models, and calculating  H_0 values inferred

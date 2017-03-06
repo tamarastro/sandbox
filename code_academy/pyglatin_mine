@@ -1,3 +1,4 @@
+
 def enter_word():
     count = 0
     word = input('input a word')
